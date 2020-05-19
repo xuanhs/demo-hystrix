@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: demo-hystrix
+  main:
+    allow-bean-definition-overriding: true
+eureka:
+  client:
+    enabled: true
+    serviceUrl:
+      defaultZone: http://127.0.0.1:8761/eureka
+server:
+  port: 8200
+
+feign:
+  hystrix:
+    enabled: true
+
