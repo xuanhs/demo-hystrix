@@ -12,6 +12,16 @@ server:
   port: 8200
 
 feign:
+  httpclient:
+    connection-timeout: 10000
   hystrix:
     enabled: true
+
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 10000
 

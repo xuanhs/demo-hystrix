@@ -17,4 +17,14 @@ public class TestServiceFallback implements TestServerApi {
     public String timeOut(Integer id) {
         return "熔断：" + id;
     }
+
+    @Override
+    public String exception(Integer id) {
+        return "熔断：" + id;
+    }
+
+    @Override
+    public String exceptionNPL(Integer id) {
+        return "熔断：" + id;
+    }
 }
